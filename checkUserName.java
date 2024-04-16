@@ -10,6 +10,13 @@ public class checkUserName {
     public static void checkUserName(){
           
           Scanner in = new Scanner(System.in);
+            //Prompt user to enter names
+          System.out.print("Enter firstName: ");
+          String firstName = in.nextLine();
+          
+          System.out.println("Enter lastName: ");
+          String lastName = in.nextLine();
+        
           //Prompt user to enter username
           System.out.print("Enter userName: ");
           String userName = in.nextLine();
