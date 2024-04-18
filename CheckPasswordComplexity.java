@@ -20,7 +20,7 @@ public class CheckPasswordComplexity {
           //declaring integer variable to determine password length
           int inputLength = userPassword.length();
           
-          //declaring boolean to check for an underscore in username 
+          //declaring boolean to check for a special characters in userPassword 
            boolean specialCharacter = userPassword.startsWith("$");
           
           //Character:
@@ -38,19 +38,22 @@ public class CheckPasswordComplexity {
           }
            //if-else statements to test password complexity conditions
           if(upperCount >= NUM_UPPER_LETTERS && digitCount >= NUM_DIGITS && inputLength >= 8 && specialCharacter)
-          
+              //output when the userPassword meets all the requirements
               System.out.println("Password successfully captured");
           else{
               System.out.println("Password is not correctly formatted, please ensure that the password contains the following:");
               if(inputLength < 8)
                   //output when userPassword does not contain the required amount of characters
                   System.out.println("- at least 8 characters");
+              
               if(upperCount < NUM_UPPER_LETTERS)
                   //output when userPassword does not contain the required amount of Uppercase characters
                   System.out.println("- 1 or more uppercase letters");
+              
               if(digitCount < NUM_DIGITS)
                   //output when userPassword does not contain the required amount of Numerical characters
                   System.out.println("- 1 or more numbers");
+              
               if(specialCharacter == false)
                   //output when userPassword does not contain a special character
                   System.out.println("- start with $ as a special character");
